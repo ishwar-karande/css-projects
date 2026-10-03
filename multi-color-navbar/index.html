@@ -4,6 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=Michroma&display=swap');
+</style>
+    <style>
+       :root{
+        --color:rgb(34, 27, 27);
+        --secolor:rgb(218, 202, 202);
+        --font:"Cinzel";
+        --pad:3px;
+        --margin-right:10px;
+        --border:2px solid rgb(198, 109, 198);
+        --br:10px;
+       }
+
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body{
+        --color:rgb(166, 164, 164);
+        color: var(--color);
+       }
+
+       .navbar{
+        background-color: var(--color);
+       }
+
+       ul {
+        --pad:15px;
+        padding: var(--pad);
+       }
+
+       ul li{
+        list-style-type: none;
+        display: inline;
+        color: var(--secolor);
+        font-family: var(--font);
+        padding: var(--pad);
+        margin: var(--margin);
+        border: var(--border);
+        border-radius: var(--br);  
+     }
+
+    </style>
 </head>
 <body>
     <nav>
