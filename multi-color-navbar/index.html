@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=Michroma&display=swap');
-</style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=Michroma&display=swap');
+    </style>
     <style>
-       :root{
-        --color:rgb(34, 27, 27);
-        --secolor:rgb(218, 202, 202);
-        --font:"Cinzel";
-        --pad:3px;
-        --margin-right:10px;
-        --border:2px solid rgb(198, 109, 198);
-        --br:10px;
-       }
+        :root {
+            --color: rgb(244, 241, 241);
+            --secolor: white;
+            --font: "Cinzel";
+            --pad: 15px;
+            --margin: 20px;
+            --border: 2px solid black;
+            --br: 10px;
+            --font-size: 18px;
+        }
 
-       *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-       }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-       body{
-        --color:rgb(166, 164, 164);
-        color: var(--color);
-       }
+        body {
+            background-color: var(--color);
+            --margin: 43px;
+            margin: var(--margin);
+        }
 
-       .navbar{
-        background-color: var(--color);
-       }
+        nav {
+            --pad: 10px;
+            padding: var(--pad);
+        }
 
-       ul {
-        --pad:15px;
-        padding: var(--pad);
-       }
+        .navbar {
+            --color:black;
+            background-color: var(--color);
+            --pad:15px;
+            padding-left: var(--pad);
+            --br: 30px;
+            border-radius: var(--br);
+        }
 
-       ul li{
-        list-style-type: none;
-        display: inline;
-        color: var(--secolor);
-        font-family: var(--font);
-        padding: var(--pad);
-        margin: var(--margin);
-        border: var(--border);
-        border-radius: var(--br);  
-     }
 
+
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            color: var(--secolor);
+            font-family: var(--font);
+            --pad: 10px;
+            padding: var(--pad);
+            --margin: 5px;
+            margin: var(--margin);
+            border: var(--border);
+            border-radius: var(--br);
+            font-size: var(--font-size);
+        }
+
+        #buttonli{
+            border: none;
+        }
+
+        #button {
+            --pad: 5px 10px;
+            padding: var(--pad);
+            --br: 15px;
+            border-radius: var(--br);
+            font-size: var(--font-size);
+            font-family: var(--font);
+            border: none;
+            
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -59,10 +88,11 @@
                 <li>About</li>
                 <li>Contact</li>
                 <li>Services</li>
-                <li><button>Login</button></li>
+                <li id="buttonli"><button id="button">Login</button></li>
             </ul>
         </div>
     </nav>
-    
+
 </body>
+
 </html>
