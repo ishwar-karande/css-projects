@@ -6,7 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>website layout</title>
     <style>
-        
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=Michroma&family=Oxanium:wght@200..800&family=Tilt+Neon&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Oxanium:wght@200..800&family=Tilt+Neon&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font);
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 50% 0%, rgba(120, 130, 255, 0.12), transparent 60%),
+                linear-gradient(180deg, #000000 0%, #0d0d12 50%, #1a1a22 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        :root {
+            --primary-color: white;
+            --text-color: black;
+            --font: "Inter";
+
+        }
+
+        nav {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 50%, #e6eaf5 100%);
+            padding: 30px 0;
+            position: sticky;
+            perspective: 500px;
+            overflow: visible;
+        }
+
+        ul li {
+            list-style-type: none;
+            font-weight: bolder;
+            text-align: center;
+            position: relative;
+            padding: 0 12px;
+        }
+
+
+        ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            padding: 10px 23px;
+        }
+
+        ul li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+            border-right: 1px solid black;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        #buttonli {
+            border: none;
+            position: absolute;
+            margin-left: auto;
+            box-shadow: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-right: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            padding: 0;
+        }
+
+        #button {
+            padding: 14px;
+            border: none;
+            background: linear-gradient(180deg, #ffffff 0%, #eceef5 100%);
+            box-shadow:
+                0 2px 6px rgba(0, 0, 0, 0.25),
+                0 1px 0 #ffffff inset;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #buttonli:hover #button {
+            transform: scale(1.05);
+            background: #ffffff;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+        }
+
+        ul>li:not(#buttonli)>a {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        ul>li:not(#buttonli)>a:hover {
+            transform: translateZ(20px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 
@@ -14,11 +121,11 @@
     <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact us</li>
-                <li>Services</li>
-                <li>Login</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact us</a></li>
+                <li><a href="/">Services</a></li>
+                <li id="buttonli"><button id="button"><a href="/">Login</a></button></li>
             </ul>
         </nav>
     </header>
