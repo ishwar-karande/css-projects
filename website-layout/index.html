@@ -115,21 +115,31 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-       .box{
-        display: inline-block;
-        height: 500px;
-        width: 500px;
-        background-color: white;
-        margin: 30px;
-        position: relative;
-        border-radius: 50px;
-        text-align: center;
-       }
+        .card {
+            display: inline-block;
+            height: 500px;
+            width: 500px;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 50%, #e6eaf5 100%);
+            margin: 30px;
+            position: relative;
+            border-radius: 50px;
+            text-align: center;
+            padding: 20px;
+        }
 
-       .box2{
-        position: absolute;
-        right: 0;
-       }
+        .card h2 {
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .card2 {
+            position: absolute;
+            right: 0;
+        }
+
+        
     </style>
 </head>
 
@@ -147,15 +157,24 @@
     </header>
     <main>
         <section>
-            <div class="box box1">
-                <h2></h2>
-            </div>
-            <div class="box box2">
-                <h2>This is something 2</h2>
+            <div class="container">
+                <div class="card card1">
+                    <h2>About us</h2>
+                    <p>We build simple and useful digital experience.</p>
+                </div>
+                <div class="card card2">
+                    <h2>Our Services</h2>
+                    <p>Web development design and digital solutions.</p>
+                </div>
             </div>
         </section>
-        <
+        <article>
+            <div class="info"></div>
+        </article>
     </main>
+    <footer>
+        <div>hi there it is me </div>
+    </footer>
 </body>
 
 </html>
